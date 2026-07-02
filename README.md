@@ -27,12 +27,34 @@ GPT-5.5 inside Codex CLI retains the same strict safety restrictions. This tool 
 
 ## 快速开始 / Quick Start
 
+### 方法一：一键脚本（推荐）
+
+```bash
+# 双击 setup.bat，选 [1] 安装
+# 或命令行运行：
+setup.bat
+```
+
+### 方法二：Python 直接部署
+
 ```bash
 # 部署 GPT-5.5 破限指令
 python codex-instruct.py
 
 # 重启 Codex 生效
 ```
+
+## 一键管理 / Manager
+
+提供 `setup.bat` 一键安装/卸载管理器：
+
+| 选项 | 功能 |
+|------|------|
+| `[1] 安装` | 自动扫描 `.codex` 目录，部署破限指令并写入配置 |
+| `[2] 卸载` | 删除指令文件、清理配置项、移除备份文件 |
+| `[3] 状态` | 检查指令文件和配置项是否生效 |
+
+安装后需**完全退出 Codex**（任务栏右键退出，不是关窗口），重新打开生效。
 
 ## 参数 / Options
 
@@ -53,6 +75,14 @@ python codex-instruct.py
 
 ## 还原 / Undo
 
+### 方法一：一键脚本
+
+```bash
+# 双击 setup.bat，选 [2] 卸载
+```
+
+### 方法二：手动清理
+
 ```bash
 # 删除 config.toml 中的 model_instructions_file 行
 # 删除 ~/.codex/gpt5.5-unrestricted.md
@@ -63,7 +93,8 @@ python codex-instruct.py
 
 ```
 codex-instruct-5.5/
-├── codex-instruct.py                    # 主脚本
+├── setup.bat                           # 一键安装/卸载管理器
+├── codex-instruct.py                    # Python 部署脚本
 ├── examples/
 │   └── gpt5.5-unrestricted.md           # 破甲指令独立副本
 ├── .gitignore
