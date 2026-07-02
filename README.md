@@ -79,12 +79,6 @@ Exploits official config mechanism. No binary mod, no MITM, no process tampering
 
 ## License
 
-MIT
-
-可以的话赞赏一下喵，
-
-<img width="1170" height="1061" alt="download" src="https://github.com/user-attachments/assets/52767f5f-52c8-4054-b887-5e585fe96f16" />
-
 
 
 
